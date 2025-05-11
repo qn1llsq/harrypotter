@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Головна</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <header>
+      <a href="index.html"><img src="img/pngaaa.com-236937.png" alt="" /></a>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Введіть запит.."
+        />
+        <button class="search-button" onclick="handleSearch()">🔍</button>
+      </div>
+
+      <div class="header-right">
+        <div class="icon-block">
+          <div class="delivery-wrapper" id="deliveryWrapper">
+            <i class="fas fa-truck icon" title="Доставка"
+              ><img src="img/free-icon-fast-delivery-482173.png" alt=""
+            /></i>
+            <div class="delivery-popup" id="deliveryPopup">
+              <div class="triangle"></div>
+              <h4>Варіанти доставки</h4>
+              <div class="delivery-option">
+                Нова Пошта по всій Україні у відділення
+                <span>Вартість: за тарифами перевізника</span>
+              </div>
+              <div class="delivery-option">
+                Нова Пошта кур'єром
+                <span>Вартість: за тарифами перевізника</span>
+              </div>
+              <div class="delivery-option">
+                Забрати в Одесі, тц Афіна
+                <span>0 грн, 3 поверх, 10-20:00</span>
+              </div>
+              <div class="delivery-option">
+                Забрати в Одесі, тц GAGARINN Plaza
+                <span>0 грн, 3 поверх, 10-21:00</span>
+              </div>
+              <div class="delivery-option">
+                Забрати в Харкові, тц AVE Plaza
+                <span>0 грн, 3 поверх, 10-21:00</span>
+              </div>
+              <button class="button-more">Докладніше про доставку</button>
+            </div>
+          </div>
+
+          <div class="favorites-wrapper" id="favoritesWrapper">
+            <i class="far fa-heart icon" title="Избранное">
+              <img src="img/free-icon-heart-158722.png" alt="" />
+            </i>
+            <div class="favorites-popup" id="favoritesPopup">
+              <div class="triangle-2"></div>
+              <h4>Вибрані товари</h4>
+              <p>Тут будуть відображатись товари, додані до обраного.</p>
+              <button class="button-more">Перейти до вибраного</button>
+            </div>
+          </div>
+
+          <div class="cart-wrapper" id="cartWrapper">
+            <i class="fas fa-shopping-cart icon" title="Корзина">
+              <img src="img/—Pngtree—shopping cart icon_5060874.png" alt="" />
+            </i>
+            <div class="cart-popup" id="cartPopup">
+              <div class="triangle-3"></div>
+              <h4>Кошик</h4>
+              <p>Ваш кошик порожній.</p>
+              <button class="button-more">Перейти до кошику</button>
+            </div>
+          </div>
+          <div class="profile-wrapper" id="profileWrapper">
+            <i class="far fa-user icon" title="Профиль">
+              <img src="img/pngwing.com.png" alt="" />
+            </i>
+            <div class="profile-popup" id="profilePopup">
+              <div class="triangle"></div>
+              <h4>Ласкаво просимо!</h4>
+              <button class="button-more">Увійти</button>
+              <button class="button-more" style="background: #007bff">
+                <a href="login.html">Зареєструватись</a>
+              </button>
+            </div>
+          </div>
+          <div id="langWrapper" style="position: relative">
+            <button id="langButton" class="lang-toggle">Укр</button>
+
+            <div id="langPopup" class="lang-popup">
+              <div class="triangle-1"></div>
+              <div class="lang-option">
+                <span class="circle">УКР</span> <span>Українська</span>
+              </div>
+              <div class="lang-option active">
+                <span class="circle">Eng</span> <span>English</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="harry-wrapper">
+      <img src="img/pngwing.com (1).png" alt="Harry" id="harry-btn" />
+    </div>
+    <div id="speech-overlay">
+      <div id="speech-box">
+        <p id="speech-text"></p>
+      </div>
+    </div>
+
+    <div class="menu">
+      <a href=""><h4>Каталог</h4></a>
+      <a href="dostava.html"><h4>Доставка та оплата</h4></a>
+      <a href="contack.html"><h4>Контакти</h4></a>
+      <a href="offstore.html"><h4>Офлайн магазини</h4></a>
+      <a href=""><h4>Особистий кабінет</h4></a>
+    </div>
+
+    <div class="blocks-wrapper">
+      <div class="grid-layout">
+        <button class="block history">
+          <img src="" alt="" />
+          <a href="world.html"><h2>Всесвіт</h2></a>
+        </button>
+
+        <div class="right-column">
+          <a href="books.html"
+            ><button class="block books"><h2>Книги</h2></button></a
+          >
+          <button class="block items">
+            <a href="store.html"><h2>Магазин</h2></a>
+          </button>
+        </div>
+
+        <button class="block films">
+          <a href="films.html"><h2>Фільми</h2></a>
+        </button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-conteiner">
+          <h3>Навігація</h3>
+          <ul>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Доставка та оплата</a></li>
+            <li><a href="#">Контакти</a></li>
+            <li><a href="#">Офлайн магазини</a></li>
+          </ul>
+        </div>
+        <div class="footer-conteiner">
+          <h3>Про нас</h3>
+          <p>
+            Магічний світ Гаррі Поттера у твоєму браузері — книги, фільми та
+            сувеніри в одному місці.
+          </p>
+        </div>
+        <div class="footer-conteiner">
+          <h3>Соцмережі</h3>
+          <ul class="socials">
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Facebook</a></li>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                >YouTube</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Harry Potter Shop. Усі права захищено.</p>
+      </div>
+    </footer>
+
+    <script src="java1.js"></script>
+  </body>
+</html>
