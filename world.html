@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Всесвіт      </title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="img/klipartz.com.png" alt="" /></a>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Введіть запит.."
+        />
+        <button class="search-button" onclick="handleSearch()">🔍</button>
+      </div>
+
+      <div class="header-right">
+        <div class="icon-block">
+          <div class="delivery-wrapper" id="deliveryWrapper">
+            <i class="fas fa-truck icon" title="Доставка"
+              ><img src="img/free-icon-fast-delivery-482173.png" alt=""
+            /></i>
+            <div class="delivery-popup" id="deliveryPopup">
+              <div class="triangle"></div>
+              <h4>Варианты доставки</h4>
+              <div class="delivery-option">
+                Новая Почта по всей Украине в отделение
+                <span>Стоимость: по тарифам перевозчика</span>
+              </div>
+              <div class="delivery-option">
+                Новая Почта курьером
+                <span>Стоимость: по тарифам перевозчика</span>
+              </div>
+              <div class="delivery-option">
+                Забрать в Одессе, тц Афина
+                <span>0 грн, 3 этаж, 10-20:00</span>
+              </div>
+              <div class="delivery-option">
+                Забрать в Одессе, тц GAGARINN Plaza
+                <span>0 грн, 3 этаж, 10-21:00</span>
+              </div>
+              <div class="delivery-option">
+                Забрать в Харькове, тц AVE Plaza
+                <span>0 грн, 3 этаж, 10-21:00</span>
+              </div>
+              <button class="button-more">Подробнее о доставке</button>
+            </div>
+          </div>
+
+          <div class="favorites-wrapper" id="favoritesWrapper">
+            <i class="far fa-heart icon" title="Избранное">
+              <img src="img/free-icon-heart-158722.png" alt="" />
+            </i>
+            <div class="favorites-popup" id="favoritesPopup">
+              <div class="triangle-2"></div>
+              <h4>Вибрані товари</h4>
+              <p>Тут будуть відображатись товари, додані до обраного.</p>
+              <button class="button-more">Перейти до вибраного</button>
+            </div>
+          </div>
+
+          <div class="cart-wrapper" id="cartWrapper">
+            <i class="fas fa-shopping-cart icon" title="Корзина">
+              <img src="img/—Pngtree—shopping cart icon_5060874.png" alt="" />
+            </i>
+            <div class="cart-popup" id="cartPopup">
+              <div class="triangle-3"></div>
+              <h4>Кошик</h4>
+              <p>Ваш кошик порожній.</p>
+              <button class="button-more">Перейти до кошику</button>
+            </div>
+          </div>
+          <div class="profile-wrapper" id="profileWrapper">
+            <i class="far fa-user icon" title="Профиль">
+              <img src="img/pngwing.com.png" alt="" />
+            </i>
+            <div class="profile-popup" id="profilePopup">
+              <div class="triangle"></div>
+              <h4>Добро пожаловать!</h4>
+              <button class="button-more">Войти</button>
+              <button class="button-more" style="background: #007bff">
+                Зарегистрироваться
+              </button>
+            </div>
+          </div>
+          <div id="langWrapper" style="position: relative">
+            <button id="langButton" class="lang-toggle">Укр</button>
+
+            <div id="langPopup" class="lang-popup">
+              <div class="triangle-1"></div>
+              <div class="lang-option">
+                <span class="circle">УКР</span> <span>Українська</span>
+              </div>
+              <div class="lang-option active">
+                <span class="circle">Eng</span> <span>English</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-worlds" id="cardContainer">
+      <div class="card">
+        <h3><span class="emoji">✨</span>Світ Гаррі Поттера</h3>
+        <p>Це чарівний всесвіт, створений Джоан Роулінг...</p>
+        <div class="card-content">
+          У цьому всесвіті магія — реальна частина життя. Події відбуваються у
+          паралельному світі магів, який співіснує з немагічним світом. Герої
+          переживають пригоди, борються з темними силами та навчаються в
+          магічних закладах.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🏰</span>Гоґвартс</h3>
+        <p>Школа чарів і чаклунства...</p>
+        <div class="card-content">
+          Гоґвартс — це замок, де навчаються юні маги. Існують чотири
+          факультети: Грифіндор, Слизерин, Когтевран і Пуффендуй. Кожен студент
+          має паличку, форму, відвідує заняття з зіллєваріння, захисту від
+          темних мистецтв тощо.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🏆</span>Квідич</h3>
+        <p>Спортивна гра магів з мітлами...</p>
+        <div class="card-content">
+          Це популярна магічна гра на мітлах з чотирма позиціями гравців:
+          охоронці, загонщики, відбивачі й шукач. Матчі проходять з
+          використанням кількох м'ячів, зокрема Снич — маленька золота куля, яку
+          шукач має спіймати.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🧛‍♂️</span>Темні сили і Волдеморт</h3>
+        <p>Основний антагоніст серії...</p>
+        <div class="card-content">
+          Волдеморт — темний чаклун, який прагне безсмертя й панування над
+          світом магів. Він створив горокракси — предмети, в яких захована
+          частина його душі. Його послідовники — Пожирачі Смерті — сіяли страх і
+          насилля.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🧙‍♂️</span>Магічні істоти</h3>
+        <p>Гіпогрифи, домовики, дракони...</p>
+        <div class="card-content">
+          Світ сповнений різноманітних істот — від доброзичливих домовиків (як
+          Доббі), до небезпечних драконів. Магічні істоти мають свої закони,
+          магічні властивості, і часто відіграють важливу роль у сюжеті.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🧠</span>Глибокий сенс</h3>
+        <p>Теми дружби, вибору, прийняття...</p>
+        <div class="card-content">
+          Книги торкаються тем зради, прощення, боротьби добра і зла, любові,
+          втрати і сили вибору. Герої не завжди ідеальні, але саме їхні рішення
+          визначають, хто вони є насправді. Чарівний світ є метафорою реального
+          життя.
+        </div>
+      </div>
+
+      
+      <div class="card">
+        <a href="index.html">
+        <h3><span class="emoji">🏠</span>Повернутися на головну</h3>
+        <p>Повернутись на головну сторінку</p>
+        <div class="card-content">
+        </div>
+      </div></a>
+
+      <div class="card">
+        <a href="start.html">
+        <h3><span class="emoji">💭</span>Тест</h3>
+        <p>Перевір свої знання</p>
+        <div class="card-content">
+        </div>
+      </div></a>
+    </div>
+    <script src="world.js"></script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вiдправка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+       <a href="index.html"><img src="img/klipartz.com.png" alt="" /></a>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Введіть запит.."
+        />
+        <button class="search-button" onclick="handleSearch()">🔍</button>
+      </div>
+
+      <div class="header-right">
+        <div class="icon-block">
+          <div class="delivery-wrapper" id="deliveryWrapper">
+            <i class="fas fa-truck icon" title="Доставка"
+              ><img src="img/free-icon-fast-delivery-482173.png" alt=""
+            /></i>
+            <div class="delivery-popup" id="deliveryPopup">
+              <div class="triangle"></div>
+              <h4>Варианты доставки</h4>
+              <div class="delivery-option">
+                Новая Почта по всей Украине в отделение
+                <span>Стоимость: по тарифам перевозчика</span>
+              </div>
+              <div class="delivery-option">
+                Новая Почта курьером
+                <span>Стоимость: по тарифам перевозчика</span>
+              </div>
+              <div class="delivery-option">
+                Забрать в Одессе, тц Афина
+                <span>0 грн, 3 этаж, 10-20:00</span>
+              </div>
+              <div class="delivery-option">
+                Забрать в Одессе, тц GAGARINN Plaza
+                <span>0 грн, 3 этаж, 10-21:00</span>
+              </div>
+              <div class="delivery-option">
+                Забрать в Харькове, тц AVE Plaza
+                <span>0 грн, 3 этаж, 10-21:00</span>
+              </div>
+              <button class="button-more">Подробнее о доставке</button>
+            </div>
+          </div>
+
+          <div class="favorites-wrapper" id="favoritesWrapper">
+            <i class="far fa-heart icon" title="Избранное">
+              <img src="img/free-icon-heart-158722.png" alt="" />
+            </i>
+            <div class="favorites-popup" id="favoritesPopup">
+              <div class="triangle-2"></div>
+              <h4>Вибрані товари</h4>
+              <p>Тут будуть відображатись товари, додані до обраного.</p>
+              <button class="button-more">Перейти до вибраного</button>
+            </div>
+          </div>
+
+          <div class="cart-wrapper" id="cartWrapper">
+            <i class="fas fa-shopping-cart icon" title="Корзина">
+              <img src="img/—Pngtree—shopping cart icon_5060874.png" alt="" />
+            </i>
+            <div class="cart-popup" id="cartPopup">
+              <div class="triangle-3"></div>
+              <h4>Кошик</h4>
+              <p>Ваш кошик порожній.</p>
+              <button class="button-more">Перейти до кошику</button>
+            </div>
+          </div>
+          <div class="profile-wrapper" id="profileWrapper">
+            <i class="far fa-user icon" title="Профиль">
+              <img src="img/pngwing.com.png" alt="" />
+            </i>
+            <div class="profile-popup" id="profilePopup">
+              <div class="triangle"></div>
+              <h4>Добро пожаловать!</h4>
+              <button class="button-more">Войти</button>
+              <button class="button-more" style="background: #007bff">
+                Зарегистрироваться
+              </button>
+            </div>
+          </div>
+          <div id="langWrapper" style="position: relative">
+            <button id="langButton" class="lang-toggle">Укр</button>
+
+            <div id="langPopup" class="lang-popup">
+              <div class="triangle-1"></div>
+              <div class="lang-option">
+                <span class="circle">УКР</span> <span>Українська</span>
+              </div>
+              <div class="lang-option active">
+                <span class="circle">Eng</span> <span>English</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu">
+      <a href=""><h4>Каталог</h4></a>
+      <a href="dostava.html"><h4>Доставка та оплата</h4></a>
+      <a href="contack.html"><h4>Контакти</h4></a>
+      <a href="offstore.html"><h4>Офлайн магазини</h4></a>
+      <a href=""><h4>Личный кабинет</h4></a>
+    </div>
+
+    <div class="container-dostava">
+     
+
+  <div class="container-dostava">
+    <h1>Доставка і оплата</h1>
+
+    <div class="section">
+      <h2>Доставка</h2>
+
+      <h3>Нова Пошта (у відділення)</h3>
+      <ul>
+        <li>Доставка у зручне для вас відділення</li>
+        <li>Термін доставки: 2 робочі дні</li>
+        <li>Вартість: згідно з тарифами Нової Пошти (безкоштовно при сумі замовлення від 2990 грн)</li>
+      </ul>
+
+      <h3>Нова Пошта (кур’єром)</h3>
+      <ul>
+        <li>Доставка кур’єром по всій території України*</li>
+        <li>Термін доставки: 2 робочі дні</li>
+        <li>Вартість: згідно з тарифами Нової Пошти (безкоштовно при сумі замовлення від 2990 грн)</li>
+      </ul>
+
+      <h3>Самовивіз з магазинів</h3>
+      <ul>
+        <li class="location">Одеса, ТЦ Афіна, Грецька пл. 3/4, 6500</li>
+        <li>Години роботи: 10:00–20:00, без вихідних</li>
+        <li class="location">Одеса, ТЦ Gagarin Plaza, вул. Генуезька 5/2, 65000</li>
+        <li>Години роботи: 10:00–21:00, без вихідних</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Варіанти оплати</h2>
+      <ul>
+        <li><strong>Оплата карткою або готівкою при отриманні замовлення на пошті</strong><br>
+          Комісія: згідно з тарифами Нової Пошти за переказ коштів
+        </li>
+        <li><strong>Оплата карткою в системі LiqPay (ПриватБанк)</strong><br>
+          Комісія: 0 грн
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Оформлення замовлення</h2>
+      <ul>
+        <li>Додайте товари в кошик</li>
+        <li>Перейдіть у кошик і натисніть кнопку "Оформити"</li>
+      </ul>
+    </div>
+  </div>
+
+    
+</body>
+<script></script>
+</html>

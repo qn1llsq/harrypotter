@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Магазин</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="img/klipartz.com.png" alt="" /></a>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Введіть запит.."
+        />
+        <button class="search-button" onclick="handleSearch()">🔍</button>
+      </div>
+
+      <div class="header-right">
+        <div class="icon-block">
+          <div class="delivery-wrapper" id="deliveryWrapper">
+            <i class="fas fa-truck icon" title="Доставка"></i>
+              <a href="index.html"
+                ><img src="img/free-icon-fast-delivery-482173.png" alt="" /></a
+            ></i>
+            <div class="delivery-popup" id="deliveryPopup">
+              <div class="triangle"></div>
+              <h4>Варианты доставки</h4>
+              <div class="delivery-option">
+                Новая Почта по всей Украине в отделение
+                <span>Стоимость: по тарифам перевозчика</span>
+              </div>
+              <div class="delivery-option">
+                Новая Почта курьером
+                <span>Стоимость: по тарифам перевозчика</span>
+              </div>
+              <div class="delivery-option">
+                Забрать в Одессе, тц Афина
+                <span>0 грн, 3 этаж, 10-20:00</span>
+              </div>
+              <div class="delivery-option">
+                Забрать в Одессе, тц GAGARINN Plaza
+                <span>0 грн, 3 этаж, 10-21:00</span>
+              </div>
+              <div class="delivery-option">
+                Забрать в Харькове, тц AVE Plaza
+                <span>0 грн, 3 этаж, 10-21:00</span>
+              </div>
+              <button class="button-more">Подробнее о доставке</button>
+            </div>
+          </div>
+
+          <div class="favorites-wrapper" id="favoritesWrapper">
+            <i class="far fa-heart icon" title="Избранное">
+              <img src="img/free-icon-heart-158722.png" alt="" />
+            </i>
+            <div class="favorites-popup" id="favoritesPopup">
+              <div class="triangle-2"></div>
+              <h4>Вибрані товари</h4>
+              <p>Тут будуть відображатись товари, додані до обраного.</p>
+              <button class="button-more">Перейти до вибраного</button>
+            </div>
+          </div>
+
+          <div class="cart-wrapper" id="cartWrapper">
+            <i class="fas fa-shopping-cart icon" title="Корзина">
+              <img src="img/—Pngtree—shopping cart icon_5060874.png" alt="" />
+            </i>
+            <div class="cart-popup" id="cartPopup">
+              <div class="triangle-3"></div>
+              <h4>Кошик</h4>
+              <p>Ваш кошик порожній.</p>
+              <button class="button-more">Перейти до кошику</button>
+            </div>
+          </div>
+          <div class="profile-wrapper" id="profileWrapper">
+            <i class="far fa-user icon" title="Профиль">
+              <img src="img/pngwing.com.png" alt="" />
+            </i>
+            <div class="profile-popup" id="profilePopup">
+              <div class="triangle"></div>
+              <h4>Добро пожаловать!</h4>
+              <button class="button-more">Войти</button>
+              <button class="button-more" style="background: #007bff">
+                Зарегистрироваться
+              </button>
+            </div>
+          </div>
+          <div id="langWrapper" style="position: relative">
+            <button id="langButton" class="lang-toggle">Укр</button>
+
+            <div id="langPopup" class="lang-popup">
+              <div class="triangle-1"></div>
+              <div class="lang-option">
+                <span class="circle">УКР</span> <span>Українська</span>
+              </div>
+              <div class="lang-option active">
+                <span class="circle">Eng</span> <span>English</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu">
+      <a href="dostava.html"><h4>Доставка та оплата</h4></a>
+      <a href="contack.html"><h4>Контакти</h4></a>
+      <a href="offstore.html"><h4>Офлайн магазини</h4></a>
+      <a href="#"><h4>Особистий кабінет</h4></a>
+    </div>
+
+    <div class="catalog-wrapper">
+      <button class="catalog-button">
+        <div class="catalog-toggle">Каталог</div>
+      </button>
+      <div class="catalog-dropdown">
+        <a href="#">Книги</a>
+        <a href="#">Іграшки</a>
+        <a href="#">Одяг</a>
+        <a href="#">Сувеніри</a>
+      </div>
+    </div>
+
+    <div class="container-store">
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/57360.jpg" alt=""></div>
+        <div class="product-name">Фигурка Funko POP! Deluxe: Wizarding World: Harry Potter:</div>
+        <div class="product-price">₴1650</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/71318.jpg" alt=""></div>
+        <div class="product-name">Набор фигурок Funko Bitty POP!: Wizarding World: Harry Potter (4-pack / 3+1 Mystery Bitties)</div>
+        <div class="product-price">₴899</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/463603.jpg" alt=""></div>
+        <div class="product-name">Набор ручек Cerda: Wizarding World: Harry Potter</div>
+        <div class="product-price">₴250</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/41435.jpg" alt=""></div>
+        <div class="product-name">Акриловый светильник Wizarding World: Harry Potter</div>
+        <div class="product-price">₴499</div>
+        <button class="buy-button">Купить</button>
+      </div>
+    </div>
+
+    <div class="container-store">
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/129252.jpg" alt=""></div>
+        <div class="product-name">Часы Wizarding World: Harry Potter: Harry Potter</div>
+        <div class="product-price">₴330</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/82706.jpg" alt=""></div>
+        <div class="product-name">Фигурка Funko Pocket POP!: Wizarding World: Harry Potter</div>
+        <div class="product-price">₴1350</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/76435.jpg" alt=""></div>
+        <div class="product-name">Конструктор LEGO: Wizarding World: Harry Potter</div>
+        <div class="product-price">₴8399</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/14722.jpg" alt=""></div>
+        <div class="product-name">Фигурка Funko: Mistery Minis: Wizarding World: Harry Potter</div>
+        <div class="product-price">₴399</div>
+        <button class="buy-button">Купить</button>
+      </div>
+    </div>
+
+    <div class="container-store">
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/60089.jpg" alt=""></div>
+        <div class="product-name">Фигурка Funko POP!: Rides: Wizarding World: Harry Potter: Harry Potter and Buckbeak</div>
+        <div class="product-price">₴2499</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/9268.jpg" alt=""></div>
+        <div class="product-name">3D брелок Wizarding World: Harry Potter: Harry Potter</div>
+        <div class="product-price">₴250</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/76389.jpg" alt=""></div>
+        <div class="product-name">Конструктор LEGO: Wizarding World: Harry Potter: 20th Years: Hogwarts: Chamber of Secrets</div>
+        <div class="product-price">₴6999</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/120028.jpg" alt=""></div>
+        <div class="product-name">Игральные карты Theory11: Wizarding World: Harry Potter: Hogwarts: Hufflepuff</div>
+        <div class="product-price">₴599</div>
+        <button class="buy-button">Купить</button>
+      </div>
+    </div>
+
+    <div class="container-store">
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/96354.jpg" alt=""></div>
+        <div class="product-name">Интерактивная книга Harry Potter. A Pop-Up Guide to Diagon Alley and Beyond</div>
+        <div class="product-price">3000</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/58757.jpg" alt=""></div>
+        <div class="product-name">Настольная игра Mattel: UNO: Wizarding World: Harry Potter</div>
+        <div class="product-price">₴670</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/30449.jpg" alt=""></div>
+        <div class="product-name">Фигурка Funko: 5 Star: Wizarding World: Harry Potter: Harry Potter,</div>
+        <div class="product-price">Немає у наявності</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/products/figures-and-statues/Funko/54266.jpg" alt="">
+        </div>
+        <div class="product-name">Фигурка Funko POP!: Wizarding World: Harry Potter: Harry Potter</div>
+        <div class="product-price">Немає у наявності</div>
+        <button class="buy-button">Купить</button>
+      </div>
+    </div>
+
+    <div class="container-store">
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/76430.jpg" alt=""></div>
+        <div class="product-name">Конструктор LEGO: Wizarding World: Harry Potter: Hogwarts Castle: Owlery</div>
+        <div class="product-price">₴1999</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/76443.jpg" alt=""></div>
+        <div class="product-name">Конструктор LEGO: Wizarding World: Harry Potter: Hagrid and Harry's Motorcycle Ride</div>
+        <div class="product-price">₴2299</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/76434.jpg" alt=""></div>
+        <div class="product-name">Конструктор LEGO: Wizarding World: Harry Potter: Aragog in the Forbidden Forest</div>
+        <div class="product-price">₴849</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/71043.jpg" alt=""></div>
+        <div class="product-name">Конструктор LEGO: Wizarding World: Harry Potter: Hogwarts Castle</div>
+        <div class="product-price">₴21999</div>
+        <button class="buy-button">Купить</button>
+      </div>
+    </div>
+
+    <div class="container-store">
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/76441.jpg" alt=""></div>
+        <div class="product-name">Конструктор LEGO: Wizarding World: Harry Potter: Hogwarts Castle: Dueling Club</div>
+        <div class="product-price">₴1099</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/57360.jpg" alt=""></div>
+        <div class="product-name">Фигурка Funko POP! Deluxe: Wizarding World: Harry Potter: Harry Potter Pushing Trolley</div>
+        <div class="product-price">₴1659</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/83622.jpg" alt=""></div>
+        <div class="product-name">Фигурки Funko Bitty Pop!: Rides: Wizarding World: Harry Potter: Harry Potter and Hogwarts Express</div>
+        <div class="product-price">₴445</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/451653.jpg" alt=""></div>
+        <div class="product-name">Постер GB Eye: Maxi: Wizarding World: Harry Potter: Harry Potter and the Deathly Hallows: Part 2: Movie Poster</div>
+        <div class="product-price">₴150</div>
+        <button class="buy-button">Купить</button>
+      </div>
+    </div>
+
+    <div class="container-store">
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/65173.jpg" alt=""></div>
+        <div class="product-name">Постер GB Eye: Maxi: Wizarding World: Harry Potter: «Undesirable №1»</div>
+        <div class="product-price">₴250</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/76428.jpg" alt=""></div>
+        <div class="product-name">Конструктор LEGO: Wizarding World: Harry Potter: Hagrid's Hut: An Unexpected Visit</div>
+        <div class="product-price">₴3999</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/products/figures-and-statues/Funko/7616.jpg" alt=""></div>
+        <div class="product-name">Брелок Funko Pocket POP! Keychain: Harry Potter: Harry Potter</div>
+        <div class="product-price">Немає у наявності</div>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"><img src="https://worldofcomics.ua/_ipx/f_webp,b_transparent,fit_contain,s_218x218/file-manager/PRODUCTS/14590.jpg" alt=""></div>
+        <div class="product-name">Волшебная палочка The Noble Collection: Wizarding World: Harry Potter: Harry Potter: Wand</div>
+        <div class="product-price">Немає у наявності</div>
+        <button class="buy-button">Купить</button>
+      </div>
+    </div>
+    <script src="store.js"></script>
+  </body>
+</html>

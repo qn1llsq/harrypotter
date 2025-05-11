@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Офлайн магазини</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <header>
+      <a href="index.html"><img src="img/klipartz.com.png" alt="" /></a>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Введіть запит.."
+        />
+        <button class="search-button" onclick="handleSearch()">🔍</button>
+      </div>
+
+      <div class="header-right">
+        <div class="icon-block">
+          <div class="delivery-wrapper" id="deliveryWrapper">
+            <i class="fas fa-truck icon" title="Доставка"
+              ><img src="img/free-icon-fast-delivery-482173.png" alt=""
+            /></i>
+            <div class="delivery-popup" id="deliveryPopup">
+              <div class="triangle"></div>
+              <h4>Варіанти доставки</h4>
+              <div class="delivery-option">
+                Нова Пошта по всій Україні у відділення
+                <span>Вартість: за тарифами перевізника</span>
+              </div>
+              <div class="delivery-option">
+                Нова Пошта кур'єром
+                <span>Вартість: за тарифами перевізника</span>
+              </div>
+              <div class="delivery-option">
+                Забрати в Одесі, тц Афіна
+                <span>0 грн, 3 поверх, 10-20:00</span>
+              </div>
+              <div class="delivery-option">
+                Забрати в Одесі, тц GAGARINN Plaza
+                <span>0 грн, 3 поверх, 10-21:00</span>
+              </div>
+              <div class="delivery-option">
+                Забрати в Харкові, тц AVE Plaza
+                <span>0 грн, 3 поверх, 10-21:00</span>
+              </div>
+              <button class="button-more">Докладніше про доставку</button>
+            </div>
+          </div>
+
+          <div class="favorites-wrapper" id="favoritesWrapper">
+            <i class="far fa-heart icon" title="Избранное">
+              <img src="img/free-icon-heart-158722.png" alt="" />
+            </i>
+            <div class="favorites-popup" id="favoritesPopup">
+              <div class="triangle-2"></div>
+              <h4>Вибрані товари</h4>
+              <p>Тут будуть відображатись товари, додані до обраного.</p>
+              <button class="button-more">Перейти до вибраного</button>
+            </div>
+          </div>
+
+          <div class="cart-wrapper" id="cartWrapper">
+            <i class="fas fa-shopping-cart icon" title="Корзина">
+              <img src="img/—Pngtree—shopping cart icon_5060874.png" alt="" />
+            </i>
+            <div class="cart-popup" id="cartPopup">
+              <div class="triangle-3"></div>
+              <h4>Кошик</h4>
+              <p>Ваш кошик порожній.</p>
+              <button class="button-more">Перейти до кошику</button>
+            </div>
+          </div>
+          <div class="profile-wrapper" id="profileWrapper">
+            <i class="far fa-user icon" title="Профиль">
+              <img src="img/pngwing.com.png" alt="" />
+            </i>
+            <div class="profile-popup" id="profilePopup">
+              <div class="triangle"></div>
+              <h4>Добро пожаловать!</h4>
+              <button class="button-more">Войти</button>
+              <button class="button-more" style="background: #007bff">
+                Зарегистрироваться
+              </button>
+            </div>
+          </div>
+          <div id="langWrapper" style="position: relative">
+            <button id="langButton" class="lang-toggle">Укр</button>
+
+            <div id="langPopup" class="lang-popup">
+              <div class="triangle-1"></div>
+              <div class="lang-option">
+                <span class="circle">УКР</span> <span>Українська</span>
+              </div>
+              <div class="lang-option active">
+                <span class="circle">Eng</span> <span>English</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu">
+      <a href=""><h4>Каталог</h4></a>
+      <a href="dostava.html"><h4>Доставка та оплата</h4></a>
+      <a href="contack.html"><h4>Контакти</h4></a>
+      <a href=""><h4>Офлайн магазини</h4></a>
+      <a href=""><h4>Личный кабинет</h4></a>
+    </div>
+
+    <div class="container-offlaine">
+      <h1>
+        Магазини FAIRY FOX | Аніме, товари з фільмів, серіалів,<br />
+        комп'ютерних та настільних ігор в Одесі та Харкові
+      </h1>
+
+      <h2>
+        Доторкнутися до улюбленої історії, створити приголомшливу колекцію
+        або<br />
+        подарувати близькій людині не просто річ, а частинку її улюбленого
+        світу.
+        <br />
+
+        Відчути себе частиною великої та дружної спільноти, провести
+        незабутні<br />
+        вечори з друзями та сім'єю, граючи у захоплюючі настільні ігри Або ж<br />
+        створити затишні моменти за чашкою чаю з улюбленою книгою Все це
+        можливо<br />
+        здійснити разом із FAIRY FOX!
+      </h2>
+
+      <h3>До асортименту магазинів FAIRY FOX входять:</h3>
+      <ul>
+        <li>Товари з фільмів, ігор та серіалів</li>
+        <li>Аніме товари</li>
+        <li>Настільні ігри</li>
+        <li>Їжа та напої з Японії, Південної Кореї.</li>
+        <li>Книги та комікси</li>
+        <li>Товари для домашнього декору</li>
+        <li>Кольорові лінзи</li>
+        <li>Картини за номерами</li>
+        <li>Канцелярія</li>
+
+      </ul>
+    </div>
+  </body>
+</html>

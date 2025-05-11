@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакти</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <header>
+      <a href="index.html"><img src="img/klipartz.com.png" alt="" /></a>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Введіть запит.."
+        />
+        <button class="search-button" onclick="handleSearch()">🔍</button>
+      </div>
+
+      <div class="header-right">
+        <div class="icon-block">
+          <div class="delivery-wrapper" id="deliveryWrapper">
+            <i class="fas fa-truck icon" title="Доставка"
+              ><img src="img/free-icon-fast-delivery-482173.png" alt=""
+            /></i>
+            <div class="delivery-popup" id="deliveryPopup">
+              <div class="triangle"></div>
+              <h4>Варианты доставки</h4>
+              <div class="delivery-option">
+                Новая Почта по всей Украине в отделение
+                <span>Стоимость: по тарифам перевозчика</span>
+              </div>
+              <div class="delivery-option">
+                Новая Почта курьером
+                <span>Стоимость: по тарифам перевозчика</span>
+              </div>
+              <div class="delivery-option">
+                Забрать в Одессе, тц Афина
+                <span>0 грн, 3 этаж, 10-20:00</span>
+              </div>
+              <div class="delivery-option">
+                Забрать в Одессе, тц GAGARINN Plaza
+                <span>0 грн, 3 этаж, 10-21:00</span>
+              </div>
+              <div class="delivery-option">
+                Забрать в Харькове, тц AVE Plaza
+                <span>0 грн, 3 этаж, 10-21:00</span>
+              </div>
+              <button class="button-more">Подробнее о доставке</button>
+            </div>
+          </div>
+
+          <div class="favorites-wrapper" id="favoritesWrapper">
+            <i class="far fa-heart icon" title="Избранное">
+              <img src="img/free-icon-heart-158722.png" alt="" />
+            </i>
+            <div class="favorites-popup" id="favoritesPopup">
+              <div class="triangle-2"></div>
+              <h4>Вибрані товари</h4>
+              <p>Тут будуть відображатись товари, додані до обраного.</p>
+              <button class="button-more">Перейти до вибраного</button>
+            </div>
+          </div>
+
+          <div class="cart-wrapper" id="cartWrapper">
+            <i class="fas fa-shopping-cart icon" title="Корзина">
+              <img src="img/—Pngtree—shopping cart icon_5060874.png" alt="" />
+            </i>
+            <div class="cart-popup" id="cartPopup">
+              <div class="triangle-3"></div>
+              <h4>Кошик</h4>
+              <p>Ваш кошик порожній.</p>
+              <button class="button-more">Перейти до кошику</button>
+            </div>
+          </div>
+          <div class="profile-wrapper" id="profileWrapper">
+            <i class="far fa-user icon" title="Профиль">
+              <img src="img/pngwing.com.png" alt="" />
+            </i>
+            <div class="profile-popup" id="profilePopup">
+              <div class="triangle"></div>
+              <h4>Добро пожаловать!</h4>
+              <button class="button-more">Войти</button>
+              <button class="button-more" style="background: #007bff">
+                Зарегистрироваться
+              </button>
+            </div>
+          </div>
+          <div id="langWrapper" style="position: relative">
+            <button id="langButton" class="lang-toggle">Укр</button>
+
+            <div id="langPopup" class="lang-popup">
+              <div class="triangle-1"></div>
+              <div class="lang-option">
+                <span class="circle">УКР</span> <span>Українська</span>
+              </div>
+              <div class="lang-option active">
+                <span class="circle">Eng</span> <span>English</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu">
+      <a href=""><h4>Каталог</h4></a>
+      <a href="dostava.html"><h4>Доставка та оплата</h4></a>
+      <a href="contack.html"><h4>Контакти</h4></a>
+      <a href="offstore.html"><h4>Офлайн магазини</h4></a>
+      <a href=""><h4>Личный кабинет</h4></a>
+    </div>
+
+    <div class="container-contact">
+      <h1>Контакти</h1>
+      <hr />
+      <h3>
+        Зателефонуйте: <br />
+        +380935427296
+      </h3>
+      <p>в будь-який день з 11:00 до 20:00</p>
+      <hr />
+      <h1>
+        Магазини: <br />
+        Одеса
+      </h1>
+      <h4>
+        тц Афіна Грецька <br />
+        площа 3/4 3 <br />
+        поверх з 10:00 до 20:00 <br />
+        без вихідних
+      </h4>
+
+      <h4>
+        тц GAGARINN Plaza <br />
+        Генуезька вулиця, 5/2 <br />
+        3 поверх <br />
+        з 10:00 до 21:00 без вихідних
+      </h4>
+
+      <h1>Харків</h1>
+
+      <h3>Торговий центр тимчасово не працює</h3>
+
+      <p>
+        Сумська 10 <br />
+        тц AVE PLAZA <br />
+        3 поверх <br />
+        з 10:00 до 21:00 <br />
+        без вихідних
+      </p>
+      <hr />
+    </div>
+  </body>
+</html>
